@@ -15,7 +15,7 @@ button.addEventListener("click",drawBoard);
 function makeCells(number){
     let count = 0, i = 0, id = 0;
 
-    if(number>100 || number <= 0 || !number || isNaN(number))return false;
+    if(number>80 || number <= 0 || !number || isNaN(number))return false;
 
     while (i<number){
         while (count < number && i < number){
@@ -31,7 +31,7 @@ function makeCells(number){
 
 function fillBoard(cell){
     let display = cell.map(function(item){
-        return `<div class="cell id${item.id}"></div>`;
+        return `<div class="cell id${item.id}"></div>`; //with id for some reason
     });
     display = display.join("");
     board.innerHTML = display;
@@ -50,7 +50,7 @@ function drawing(cell){
     return cell.currentTarget.style.backgroundColor = `rgba(${array[0]},${array[1]},${array[2]},${alpha.toString()})`;
     }
 }
-
+// simple version
 /* function drawing(cell){
     cell.currentTarget.style.backgroundColor = `black`;
 } */
@@ -64,7 +64,7 @@ function clearBoard(){
 
 function drawBoard(){
     if(isNaN(cell_numbers)){
-    cell_numbers = 4;
+    cell_numbers = 4; //to not have an annoying prompt at every load
     } else {
         cell_numbers = prompt("Enter number of cells in a square")
     }
@@ -79,7 +79,7 @@ function drawBoard(){
         cell.addEventListener("mouseover",drawing)
     });
     root.style.setProperty("--cells-x",cell_numbers.toString());
-    root.style.setProperty("--cell-size",(Math.floor(1024/(cell_numbers*2))+1).toString()+"px");
+    root.style.setProperty("--cell-size",(Math.floor(1024/(cell_numbers*2))).toString()+"px"); //not perfect, but I'm not that good with Math
 }
 
 function rando(input){

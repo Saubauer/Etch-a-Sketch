@@ -7,7 +7,6 @@
 :root{
     --cell-size: 12px;
     --cells-x: 4;
-    --cells-y: 3;
 }
 
 
@@ -29,10 +28,7 @@ body{
     margin-bottom: 1.5rem;
     border: 1px solid snow;
     display: grid;
-    justify-content: center;
-    align-content: center;
-    justify-items: center;
-    align-items: center;
+
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     grid-template-columns: repeat(var(--cells-x), auto);
 }
@@ -41,11 +37,7 @@ body{
 width: var(--cell-size);
 height: var(--cell-size);
 background-color: white;
-border: 1px ridge whitesmoke;
-display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
+/* border: 1px ridge whitesmoke; */
 cursor: pointer;
 }
 
@@ -73,9 +65,6 @@ button:hover{
     border: 2px solid snow;
     margin-top: 2rem;
     display: grid;
-    justify-content: center;
-    align-content: center;
     justify-items: center;
-    align-items: center;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }

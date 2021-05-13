@@ -22,7 +22,7 @@ body{
 
 .board{
     max-height: 1024px;
-    max-width: 90vw;
+    max-width: 80vh;
     margin: 0 auto;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
@@ -63,7 +63,8 @@ button:hover{
     max-width: 90vw;
     margin: 0 auto;
     border: 2px solid snow;
-    margin-top: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
     display: grid;
     justify-items: center;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
